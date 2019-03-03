@@ -1,0 +1,218 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: #FFC0CB;
+}
+
+html {
+	font-family: "helvetica neue", sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+	/*max-width: 960px;*/
+	margin: 1em;
+	background: white;
+}
+
+/*STYLING FÖR HEADER-NAVIGATIONSMENYN*/
+
+.dropdown-menu {
+	border-bottom: 1px solid #EAEAEB;
+	text-align: right;
+	height: 70px;
+	line-height: 70px;
+}
+
+.menu-content {
+	margin: 0 30px 0 0;
+}
+
+.menu-content a {
+	text-decoration: none;
+	color: gray; 
+	margin: 0 10px;
+	line-height: 70px;
+
+}
+
+span {
+	color: #FF0000;
+}
+
+.togglelabel {
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+}
+
+#menu {
+	display: none;
+}
+
+/*STYLING FÖR VÄNSTER NAVIGATIONSMENY*/
+
+.nav {
+	border-bottom: 1px solid #EAEAEB;
+	text-align: left;
+	min-height: 100px;
+	min-width: 15%
+	line-height: 70px;
+	border: 1px solid black;
+	float: left;
+	margin: 1em;
+	padding: 1em;
+}
+
+.menu {
+	margin: 0 auto;
+}
+
+.menu a {
+	text-decoration: none;
+	color: gray; 
+	margin: 1em;
+	line-height: 70px;
+	display: block;
+	border-bottom: 1px solid #000;
+}
+
+.menulabel {
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: left;
+}
+
+#toggle {
+	display: none;
+}
+
+/*STYLING FÖR CONTENT*/
+
+.box {
+	min-height: 250px;
+	min-width: 20%;
+	border: 1px solid black;
+	margin: 1em;
+	padding: 1em;
+	float: left;
+}
+
+.box img {
+	max-width: 250px;
+	border: 1px solid black;
+}
+
+.box div {
+	margin-left: 3em;
+}
+
+.box div p:nth-child(2) {
+	float: left;
+}
+
+.box div button {
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.box div span {
+	color: red;
+}
+
+/*MEDIA QUERY FÖR PADDA-SKÄRM*/
+
+@media screen and (max-width: 1024px) {
+
+
+/*STYLING FÖR VERTIKAL MENY SAMT TOGGLE*/
+
+  .togglelabel {
+    display: block;
+    cursor: pointer;
+    float: none;
+  }
+
+  .nav {
+  	border: none;
+  }
+
+  .menu {
+  	position: absolute;
+  	text-align: center;
+  	width: 100%;
+  	display: none;
+  }
+
+  .menu a {
+  	display: block;
+  	border-bottom: 1px solid #EAEAEB;
+  	margin: 0;
+  	max-width: 25%;
+  	border: 1px solid black;
+  	/*position: relative;*/
+  	z-index: 2;
+  	background-color: #eee;
+  }
+
+  #toggle:checked + .menu {
+  	display: block;
+  }
+
+  /*STYLING FÖR CONTENT*/
+
+  .wrapper {
+  	text-align: center;
+  }
+
+  .box {
+  	display: block; 
+  	clear: left;
+  	margin-left: 33%;
+  }
+
+
+/*STYLING FÖR MOBILLÄGE*/
+
+@media screen and (max-width: 768px) {
+
+
+  /*STYLING FÖR HEADER MENU I MOBILLÄGE SAMT TOGGLE*/
+
+.menulabel {
+    display: block;
+    cursor: pointer;
+    float: right;
+    text-align: right;
+  }
+
+  .menu-content {
+  	text-align: center;
+  	width: 100%;
+  	display: none;
+  }
+
+  .menu-content a {
+  	display: block;
+  	border-bottom: 1px solid #EAEAEB;
+  	margin: 0;
+  	margin-left: 30%;
+  	max-width: 50%;
+  	border: 1px solid black;
+  	position: relative;
+  	z-index: 2;
+  	background-color: #eee;
+  }
+
+  #menu:checked + .menu-content {
+  	display: block;
+  }
+
+}
