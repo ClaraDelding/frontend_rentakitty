@@ -1,2 +1,2 @@
 # frontend_rentakitty
-frontend assignment for a webshop
+frontend assignment for an e-commerce site
